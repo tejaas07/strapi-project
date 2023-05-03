@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "liks",
+  "info": {
+    "singularName": "lik",
+    "pluralName": "liks",
+    "displayName": "likes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "likes"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "likes"
+    }
+  }
+}
